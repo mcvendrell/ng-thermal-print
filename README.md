@@ -6,9 +6,11 @@ A library for connecting Angular apps with thermal printers (type ESC/POS or Sta
 ## Drivers
 
 1. WebUSB API (No drivers needed. Works only with Chrome, Edge and Opera with direct USB connection).
+
 Why Chrome, Edge and Opera only? The USB interface of the WebUSB API provides attributes and methods for finding and connecting USB devices from a web page, but it is an experimental technology (that works, indeed) implemented only in Chromium-based browsers.
 
 2. WebPRNT (http, Star printers only)
+
 What is WebPRNT? The Star Company developed WebPRNT™ solution, that is designed to generate print data via a web browser to output directly to any Star printer fitted with a WebPRNT interface or using Star’s WebPRNT Browser Software. This includes Star thermal receipt, ticket & label printers as well as SP700 matrix kitchen printer. So, this remote printing technology will work only with Star printers.
 
 ## Developers important note
@@ -139,9 +141,9 @@ app.component.html
 
 ## Advanced features
 
-The above example is really simple and shows the main options. But, probably, you don't want the user to select the printer everytime he wants to print. To avoid it, you can save the printer the first time user selects it and recover it next time:
+The above example is really simple and shows the main options. But, probably, you don't want the user to select the printer everytime he wants to print. To avoid it, you can save the printer the first time user selects it, and recover it next time:
 
-So, the first time yo do this:
+So, the first time you do this:
   
     requestPrinter() {
         this.usbDriver.requestUsb().subscribe((result) => {
